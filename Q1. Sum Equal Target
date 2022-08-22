@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+        int arr[10],n,i,j,temp=0,k;
+    cout<<"Enter No. of integers = ";
+    cin>>n;
+    cout<<"Enter "<<n<<" Numbers = ";
+    for(i=1;i<=n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"enter Target Sum = ";
+    cin>>k;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        if(arr[i]!=arr[j])
+        {
+            if(arr[i]+arr[j]==k)
+            {
+              temp+=1;  
+            }
+        }
+    }
+    if(temp>0)
+    {
+        cout<<"possible";
+    }
+    else
+    {
+        cout<<"not possible";
+    }
+    
+}
+
+
+/*
+Test case1
+
+Enter No. of integers = 4
+Enter 4 Numbers = 4 8 7 2
+enter Target Sum = 10
+possible
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+Test case2
+
+Enter No. of integers = 5
+Enter 5 Numbers = 4 7 8 4 7
+enter Target Sum = 20
+not possible
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+*/
+
+
+
